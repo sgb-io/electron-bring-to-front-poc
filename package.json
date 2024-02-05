@@ -1,0 +1,16 @@
+{
+  "name": "electron-bring-to-front-poc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ."
+  },
+  "keywords": [],
+  "author": "sgb-io",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^28.2.1",
+    "koffi": "^2.7.4"
+  }
+}
