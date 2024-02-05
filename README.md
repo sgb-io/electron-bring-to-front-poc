@@ -46,10 +46,10 @@ However, we are still left with issue #2.
 
 ## Avoiding stealing focus
 
-There are currently only 2 known ways to achieve the desired result:
+There are currently only 2 known workarounds to achieve the desired result:
 
 1. Native Windows calls: make 2 calls to the `SetWindowPos` API that control the Z-index of a window (`HWND_TOPMOST` then `HWND_NOTOPMOST`)
-2. Electron workaround: make 2 calls to the `setAlwaysOnTop` API (`true` then `false`)
+2. Electron API calls: make 1 call to `showInactive`, then make 2 calls to the `setAlwaysOnTop` API (`true` then `false`)
 
 These techniques seem to circumvent the various restrictions above: brings the window to the top, and does not steal focus.
 
