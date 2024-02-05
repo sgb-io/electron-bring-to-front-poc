@@ -8,7 +8,7 @@ This PoC demonstrates the only 2 ways to achieve bring-to-front without stealing
 
 Although Windows has certain APIs (e.g. `SetForegroundWindow` and `BringWindowToTop`) that allow a window to be brought to the front, there are 2 major issues:
 
-1. There are various restrictions that mean the window might _not_ actually get brought to the front:
+**Issue 1**: There are various restrictions that mean the window might _not_ actually get brought to the front:
 
 > The system restricts which processes can set the foreground window. A process can set the foreground window only if one of the following conditions is true:
 >
@@ -22,7 +22,7 @@ Although Windows has certain APIs (e.g. `SetForegroundWindow` and `BringWindowTo
 > - The foreground lock time-out has expired (see SPI_GETFOREGROUNDLOCKTIMEOUT in SystemParametersInfo).
 > - No menus are active.
 
-2. Focus gets stolen
+**Issue 2** Focus gets stolen
 
 Issue #1 is partially a consequence of #2.
 
